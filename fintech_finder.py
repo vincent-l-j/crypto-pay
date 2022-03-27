@@ -120,7 +120,7 @@ st.text(" \n")
 ################################################################################
 # Streamlit Sidebar Code - Start
 
-st.sidebar.markdown("## Client Account Address and Ethernet Balance in Ether")
+st.sidebar.markdown("## Client Account Address and Ethereum Balance in Ether")
 
 ##########################################
 # Step 1 - Part 4:

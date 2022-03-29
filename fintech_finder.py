@@ -91,10 +91,10 @@ from crypto_wallet import (
 # Database of Fintech Finder candidates including their name, digital address, rating and hourly cost per Ether.
 # A single Ether is currently valued at $1,500
 candidate_database = {
-    "Lane": ["Lane", "0xaC8eB8B2ed5C4a0fC41a84Ee4950F417f67029F0", "4.3", .20, "image/lane.jpeg"],
-    "Ash": ["Ash", "0x2422858F9C4480c2724A309D58Ffd7Ac8bF65396", "5.0", .33, "image/ash.jpeg"],
-    "Jo": ["Jo", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.7", .19, "image/jo.jpeg"],
-    "Kendall": ["Kendall", "0x8fD00f170FDf3772C5ebdCD90bF257316c69BA45", "4.1", .16, "image/kendall.jpeg"]
+    "Lane": ["Lane", "0xac3FB4cbCB75cD31E1a942376402b8b68AAd45C6", "4.3", .20, "image/lane.jpeg"],
+    "Ash": ["Ash", "0xc212e9B757329891Fd6e853a89b164023291118b", "5.0", .33, "image/ash.jpeg"],
+    "Jo": ["Jo", "0x2Ef4c80D20bF833626F58C11339aB442faB5aeE3", "4.7", .19, "image/jo.jpeg"],
+    "Kendall": ["Kendall", "0xBd47b234D6b4f2a5206D3d800De2a11d4a130c7B", "4.1", .16, "image/kendall.jpeg"]
 }
 
 # A list of the FinTech Finder candidates first names

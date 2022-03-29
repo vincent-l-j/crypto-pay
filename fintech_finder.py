@@ -182,6 +182,10 @@ candidate_address = candidate_database[person][1]
 # Write the inTech Finder candidate's Ethereum Address to the sidebar
 st.sidebar.write("Ethereum Address: ", candidate_address)
 
+# Write candidate ether balance
+ether_candidate = get_balance(w3, candidate_address)
+st.sidebar.write("Ether Balance: ", ether_candidate)
+
 # Write the Fintech Finder candidate's name to the sidebar
 
 st.sidebar.markdown("## Total Wage in Ether")

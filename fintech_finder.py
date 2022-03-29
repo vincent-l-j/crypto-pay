@@ -124,7 +124,7 @@ st.text(" \n")
 ################################################################################
 # Streamlit Sidebar Code - Start
 
-st.sidebar.markdown("## Client Account Address and Ethereum Balance in Ether")
+st.sidebar.markdown("## Client Information")
 
 ##########################################
 # Step 1 - Part 4:
@@ -139,7 +139,7 @@ account = generate_account()
 ##########################################
 
 # Write the client's Ethereum account address to the sidebar
-st.sidebar.write(account.address)
+st.sidebar.write("Account Address: ", account.address)
 
 ##########################################
 # Step 1 - Part 5:
@@ -151,7 +151,8 @@ st.sidebar.write(account.address)
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
 ether_account = get_balance(w3, account.address)
-st.sidebar.write(ether_account)
+st.sidebar.write("Ether Balance: ", ether_account)
+st.sidebar.markdown("---")
 
 ##########################################
 

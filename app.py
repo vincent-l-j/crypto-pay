@@ -27,7 +27,8 @@
 # Imports
 import streamlit as st
 from web3 import Web3
-w3 = Web3(Web3.HTTPProvider('HTTP://127.0.0.1:7545'))
+from websockets.exceptions import InvalidURI
+import os
 ################################################################################
 # Step 1:
 # Import Ethereum Transaction Functions into the Fintech Finder Application
@@ -97,6 +98,18 @@ candidate_database = {
 
 # A list of the FinTech Finder candidates first names
 people = ["Lane", "Ash", "Jo", "Kendall"]
+
+# Instantiate web3 provider
+provider_default = 'HTTP://127.0.0.1:7545'
+w3 = Web3(Web3.HTTPProvider(provider_default))
+if os.getenv('USE_PROVIDER_WS') in ('True', 'true', 1):
+    PROVIDER_WS = os.getenv('PROVIDER_WS')
+    try:
+        get_balance(Web3(Web3.WebsocketProvider(PROVIDER_WS)), '0xac3FB4cbCB75cD31E1a942376402b8b68AAd45C6')
+        w3 = Web3(Web3.WebsocketProvider(PROVIDER_WS))
+    except InvalidURI as e:
+        warning_message = f"Unable to connect to websocket provider, '{PROVIDER_WS}'. Defaulting to http provider, {provider_default}"
+        st.warning(warning_message)
 
 
 def get_people():

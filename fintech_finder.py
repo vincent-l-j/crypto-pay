@@ -162,25 +162,25 @@ person = st.sidebar.selectbox('Select a Person', people)
 # Create a input field to record the number of hours the candidate worked
 hours = st.sidebar.number_input("Number of Hours")
 
-st.sidebar.markdown("## Candidate Name, Hourly Rate, and Ethereum Address")
+st.sidebar.markdown("## Candidate Information")
 
 # Identify the FinTech Hire candidate
 candidate = candidate_database[person][0]
 
 # Write the Fintech Finder candidate's name to the sidebar
-st.sidebar.write(candidate)
+st.sidebar.write("Name: ", candidate)
 
 # Identify the FinTech Finder candidate's hourly rate
 hourly_rate = candidate_database[person][3]
 
 # Write the inTech Finder candidate's hourly rate to the sidebar
-st.sidebar.write(hourly_rate)
+st.sidebar.write("Hourly Rate: ", hourly_rate, "ETH / hr")
 
 # Identify the FinTech Finder candidate's Ethereum Address
 candidate_address = candidate_database[person][1]
 
 # Write the inTech Finder candidate's Ethereum Address to the sidebar
-st.sidebar.write(candidate_address)
+st.sidebar.write("Ethereum Address: ", candidate_address)
 
 # Write the Fintech Finder candidate's name to the sidebar
 
